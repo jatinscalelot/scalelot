@@ -1,9 +1,12 @@
+const dotenv = require('dotenv').config();
+const cors = require('cors');
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var expressLayouts = require('express-ejs-layouts');
+let mongoose = require('mongoose');
 var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -14,6 +17,20 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use("/angular", express.static(__dirname + "/node_modules/angular"));
+app.use("/intl-tel-input", express.static(__dirname + "/node_modules/ng-intl-tel-input"));
+app.use(cors());
+mongoose.set('runValidators', true);
+mongoose.set('strictQuery', false);
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+mongoose.connection.once('open', () => {
+  console.log("Well done! , connected with mongoDB database");
+}).on('error', error => {
+  console.log("Oops! database connection error:" + error);
+});
 const apppaths = [
   { pathUrl: '/', routeFile: 'index'},
   { pathUrl: '/aboutus', routeFile: 'aboutus'},

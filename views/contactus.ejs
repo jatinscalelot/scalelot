@@ -1,5 +1,6 @@
+<script src="javascripts/controllers/contactus.controller.js"></script>
 <!-- ==== main start ==== -->
-<main>
+<main ng-controller="contactUsController">
    <!-- ==== banner start ==== -->
    <section class="cmn-banner bg-img" data-background="assets/images/banner/cmn-banner-bg.png">
       <div class="container">
@@ -119,17 +120,21 @@
                      <div class="col-12 col-lg-6">
                         <div class="contact-main__form  fade-top">
                            <h3>Leave A Message</h3>
-                           <form action="#" method="post" class="section__content-cta" id="form">
+                           <form ng-submit="onContact()" method="post" class="section__content-cta" id="form">
                               <div class="group-wrapper">
                                  <div class="group-input ">
-                                    <input type="text" name="contact-name" id="contactName" placeholder="Name">
+                                    <input type="text" ng-model="form.name" id="contactName" placeholder="Name">
                                  </div>
                                  <div class="group-input ">
-                                    <input type="email" name="contact-email" id="contactEmail" placeholder="Email">
+                                    <input type="email" ng-model="form.email" id="contactEmail" placeholder="Email">
                                  </div>
                               </div>
+                              <input type="hidden" id="code" ng-model="form.code">
+                              <div class="group-input mob">
+                                 <input type="phone" id="phone" ng-model="form.phone" placeholder="Phone Number">
+                              </div>
                               <div class="group-input ">
-                                 <select class="subject">
+                                 <select class="subject" ng-model="form.subject">
                                     <option data-display="Subject">
                                        Subject
                                     </option>
@@ -140,10 +145,8 @@
                                  </select>
                               </div>
                               <div class="group-input ">
-                                 <textarea name="contact-message" id="contactMessage" placeholder="Message"></textarea>
+                                 <textarea ng-model="form.message" id="contactMessage" placeholder="Message"></textarea>
                               </div>
-
-
 
                               <div class="form-cta justify-content-start">
                                  <button type="submit" class="btn btn--secondary mt-5">

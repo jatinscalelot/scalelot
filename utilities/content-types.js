@@ -1,0 +1,41 @@
+const allowedContentTypes = [
+    { extn: 'zip', mimeType: 'application/zip', fName: 'DOC' },
+    { extn: 'txt', mimeType: 'text/plain', fName: 'DOC' },
+    { extn: 'rar', mimeType: 'application/vnd.rar', fName: 'DOC' },
+    { extn: 'pdf', mimeType: 'application/pdf', fName: 'DOC' },
+    { extn: 'csv', mimeType: 'text/csv', fName: 'DOC' },
+    { extn: 'doc', mimeType: 'application/msword', fName: 'DOC' },
+    { extn: 'xls', mimeType: 'application/vnd.ms-excel', fName: 'DOC' },
+    { extn: 'ppt', mimeType: 'application/vnd.ms-powerpoint', fName: 'DOC' },
+    { extn: 'tar', mimeType: 'application/x-tar', fName: 'DOC' },
+    { extn: 'tar.gz', mimeType: 'application/x-tar', fName: 'DOC' },
+    { extn: 'odp', mimeType: 'application/vnd.oasis.opendocument.presentation', fName: 'DOC' },
+    { extn: 'ods', mimeType: 'application/vnd.oasis.opendocument.spreadsheet', fName: 'DOC' },
+    { extn: 'odt', mimeType: 'application/vnd.oasis.opendocument.text', fName: 'DOC' },
+    { extn: 'docx', mimeType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', fName: 'DOC' },
+    { extn: 'pptx', mimeType: 'application/vnd.openxmlformats-officedocument.presentationml.presentation', fName: 'DOC' },
+    { extn: 'xlsx', mimeType: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', fName: 'DOC' },
+    { extn: '7z', mimeType: 'application/x-7z-compressed', fName: 'DOC' },
+    { extn: 'webp', mimeType: 'image/webp', fName: 'IMG' },
+    { extn: 'png', mimeType: 'image/png', fName: 'IMG' },
+    { extn: 'jpg', mimeType: 'image/jpeg', fName: 'IMG' },
+    { extn: 'jpeg', mimeType: 'image/jpeg', fName: 'IMG' },
+    { extn: 'gif', mimeType: 'image/gif', fName: 'IMG' },
+    { extn: 'bmp', mimeType: 'image/bmp', fName: 'IMG' },
+    { extn: 'ico', mimeType: 'image/vnd.microsoft.icon', fName: 'IMG' },
+    { extn: 'tiff', mimeType: 'image/tiff', fName: 'IMG' },
+    { extn: 'svg', mimeType: 'image/svg+xml', fName: 'IMG' },
+    { extn: 'avif', mimeType: 'image/avif', fName: 'IMG' },
+];
+const imagearray = ['image/avif','image/webp', 'image/png', 'image/jpeg', 'image/gif', 'image/bmp', 'image/vnd.microsoft.icon', 'image/tiff', 'image/svg+xml'];
+const docarray = ['application/zip', 'text/plain', 'application/vnd.rar', 'application/pdf', 'text/csv',
+	'application/msword', 'application/vnd.ms-excel', 'application/vnd.ms-powerpoint',
+	'application/x-tar', 'application/vnd.oasis.opendocument.presentation',
+	'application/vnd.oasis.opendocument.spreadsheet', 'application/vnd.oasis.opendocument.text',
+	'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+	'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+	'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+	'application/x-7z-compressed'
+];
+const imagedocarray = ['image/avif','image/webp', 'image/png', 'image/jpeg', 'image/gif', 'image/bmp', 'image/vnd.microsoft.icon', 'image/tiff', 'image/svg+xml', 'application/pdf'];
+module.exports = { allowedContentTypes, imagearray, imagedocarray, docarray };
