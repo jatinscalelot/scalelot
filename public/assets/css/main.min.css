@@ -6676,13 +6676,21 @@ body.light .light .sub-title {
     padding: 40px 30px;
   }
   .footer-two .social a {
-    width: 70px;
-    min-width: 70px;
-    height: 70px;
+    width: 55px;
+    min-width: 55px;
+    height: 55px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .footer-two .social a i {
+    width: 35px;
+    min-width: 35px;
+    height: 35px;
+  }
+  .social {
+    gap: 10px;
   }
   .footer-two .social a i {
     display: flex;
@@ -6701,7 +6709,7 @@ body.light .light .sub-title {
   h1,
   .h1,
   .light-title {
-    font-size: 24px;
+    font-size: 36px;
     line-height: 40px;
   }
   h2 {
@@ -6751,9 +6759,9 @@ body.light .light .sub-title {
     padding: 20px 70px 20px 24px;
   }
   .secondary--navbar .open-offcanvas-nav {
-    width: 60px;
-    min-width: 60px;
-    height: 60px;
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -6792,8 +6800,8 @@ body.light .light .sub-title {
   .banner .video-frame {
     position: relative;
     inset: unset;
-    left: 15px;
-    margin-top: 40px;
+    left: 55%;
+    margin-top: -140px;
     width: 140px;
     min-width: 140px;
     height: 140px;
@@ -6955,6 +6963,14 @@ body.light .light .sub-title {
     padding: 30px 20px;
     gap: 20px;
   }
+  .section.blog .blog-two__slider.slick-initialized.slick-slider {
+    padding: 0 15px;
+    margin: 0 !important;
+  }
+  .section__content-cta h2 {
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 @media only screen and (max-width: 424.98px) {
   .banner-five .banner-five__single {
@@ -7055,7 +7071,7 @@ body.light .footer-two .section__content-cta h2 a {
   opacity: 1 !important;
 }
 .navbar__logo svg, .footer-two__left .logo svg,.offcanvas-menu__header .logo svg {
-  max-width: 80px;
+  max-width: 290px;
   width: 100%;
 }
 .form-cta label#ebcaptchatext {
@@ -7092,6 +7108,9 @@ input#mobile_code {
   border: 1px solid #1A1A1A;
 }
 @media (max-width: 767px){
+  .navbar__logo svg, .footer-two__left .logo svg, .offcanvas-menu__header .logo svg {
+    max-width: 200px; 
+}
   .section {
     padding: 50px 0px;
   }
