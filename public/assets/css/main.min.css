@@ -6783,9 +6783,11 @@ body.light .light .sub-title {
     -webkit-text-stroke: 0.5px var(--primary-color);
   }
   .banner .interval {
-    gap: 20px;
+    column-gap: 20px;
+    row-gap: 0px;
     margin-left: 10px;
-  }
+    margin-top: 5px;
+}
   .banner .banner__content {
     margin-top: -10px;
   }
@@ -6986,6 +6988,13 @@ body.light .light .sub-title {
   .thumb-radio .radio {
     margin: 0px 0px;
   }
+  .section__content-cta h2{
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .primary-navbar .navbar{
+    gap: 20px;
+  }
 }
 @media only screen and (min-width: 1440px) {
   .container {
@@ -7119,5 +7128,21 @@ input#mobile_code {
   }
   .project-sl .content h2 {
     height: auto;
+  }
+  .offer .offer__cta .offer__cta-single {
+    position: relative;
+    margin-bottom: 35px;
+  }
+  .slide-btn {
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 400px){
+  .banner .interval {
+    column-gap: 20px;
+    row-gap: 0;
   }
 }
