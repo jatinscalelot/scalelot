@@ -1438,7 +1438,7 @@ i {
   color: var(--primary-color);
 }
 .banner {
-  padding: 300px 0px 130px;
+  padding: 230px 0px 130px;
   background-color: var(--black);
   position: relative;
   z-index: 1;
@@ -1457,8 +1457,8 @@ i {
   -webkit-text-stroke: 1px var(--primary-color);
 }
 .banner .banner__content-inner {
-  max-width: 400px;
-  margin-top: 100px;
+  max-width: 80%;
+  margin-top: 30px;
   text-align: start;
 }
 .banner .banner__content-inner .cta {
@@ -1480,11 +1480,12 @@ i {
 .banner .banner-one-thumb {
   position: absolute;
   top: 220px;
+  opacity: 0.7 !important;
   left: 50%;
   transform: translateX(-50%);
   z-index: -1;
-  width: 100%;
-  max-width: 494px;
+  width: 500px;
+  max-width: 100%;
   height: auto;
   border-radius: 50%;
 }
