@@ -1071,7 +1071,7 @@
 				type: "words,chars,capitalize"
 			});
 			let chars = mySplitText.chars;
-			let folksGradient = chroma.scale(['#ff7425', '#ffffff']);
+			let folksGradient = chroma.scale(['#EF3238', '#ffffff']);
 			folksBD.to(chars, {
 				duration: 0.5,
 				scaleY: 0.6,
