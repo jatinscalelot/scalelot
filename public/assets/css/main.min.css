@@ -7116,6 +7116,19 @@ input#mobile_code {
   background-color: #1A1A1A;
   border: 1px solid #1A1A1A;
 }
+.banner #particles-js {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.banner .container {
+  position: relative;
+  z-index: 99;
+}
 
 @media (max-width: 1440px){
   .banner .interval {
