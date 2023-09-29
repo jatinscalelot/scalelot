@@ -7142,10 +7142,6 @@ input#mobile_code {
 .offer .offer__cta .sub-title {
   margin-bottom: 10px;
 }
-.banner .banner__content .text-stroke{
-  -webkit-text-fill-color: #ED3238 !important;
-  -webkit-text-stroke: none !important;
-}
 .banner .banner__content h1 {
   max-width: 90%;
 }
