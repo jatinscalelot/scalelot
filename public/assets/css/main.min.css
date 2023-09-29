@@ -3050,7 +3050,6 @@ i {
 }
 .testimonial .testimonial-s__slider .testimonial-s__content h4 {
   font-weight: 400;
-  text-transform: capitalize;
 }
 .testimonial .testimonial-s__slider .testimonial-s__content .content-cta p {
   color: var(--primary-color);
