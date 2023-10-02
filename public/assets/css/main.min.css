@@ -7131,6 +7131,10 @@ input#mobile_code {
 .banner .banner__content h1 {
   max-width: 90%;
 }
+.blog-details .bd-content-info .paragraph p {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
 @media (max-width: 1440px){
   .banner .interval {
     gap: 20px;
