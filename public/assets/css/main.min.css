@@ -1480,7 +1480,7 @@ i {
 .banner .banner-one-thumb {
   position: absolute;
   top: 220px;
-  opacity: 0.7 !important;
+  opacity: 1 !important;
   left: 50%;
   transform: translateX(-50%);
   z-index: -1;
@@ -7134,6 +7134,9 @@ input#mobile_code {
 .blog-details .bd-content-info .paragraph p {
   margin-top: 10px;
   margin-bottom: 15px;
+}
+.iti__flag-container {
+  top: -18px;
 }
 @media (max-width: 1440px){
   .banner .interval {
