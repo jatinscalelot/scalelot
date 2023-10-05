@@ -448,10 +448,10 @@ i {
   row-gap: 30px;
 }
 .section {
-  padding: 130px 0px;
+  padding: 100px 0px;
 }
 .section__cta {
-  margin-top: 65px;
+  margin-top: 55px;
   text-align: center;
 }
 .section__content-cta {
@@ -4275,7 +4275,7 @@ i {
   min-height: 260px;
 }
 .details-group h3 {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-weight: 500;
   text-transform: capitalize;
 }
@@ -5033,12 +5033,12 @@ i {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  padding: 30px;
+  padding: 20px;
   background-color: #1a1a1a;
   background-size: cover;
   background-position: left bottom;
-  height: 130px;
-  width: 280px;
+  height: auto;
+  width: calc(100% - 50px);
   overflow-y: clip;
   transition: all 0.4s ease-in-out;
 }
@@ -5065,7 +5065,7 @@ i {
   top: 0px;
   left: 100%;
   bottom: 0px;
-  width: 60px;
+  width: 40px;
   height: 100%;
   background: linear-gradient(90deg, #f90 0%, #cc2500 100%);
   transition: all 0.4s ease-in-out;
@@ -5078,9 +5078,9 @@ i {
 .team-m .team-m__single .thumb .thumb__content .social-alt a:hover {
   color: var(--white);
 }
-.team-m .team-m__single .thumb:hover .thumb__content {
+/* .team-m .team-m__single .thumb:hover .thumb__content {
   height: 220px;
-}
+} */
 .team-m .team-m__single .thumb:hover .thumb__content .info {
   transform: translateY(0px);
   display: block;
@@ -5382,7 +5382,7 @@ i {
   max-width: 1200px;
 }
 .contact-m .contact-m__single {
-  padding: 40px 65px;
+  padding: 30px 20px;
   background-color: #1a1a1a;
   text-align: center;
   height: 100%;
@@ -5391,7 +5391,7 @@ i {
   margin-bottom: 30px;
 }
 .contact-m h4 {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   text-transform: capitalize;
 }
 .contact-m p {
@@ -6501,15 +6501,16 @@ body.light .light .sub-title {
   }
   .team-m .team-m__single .thumb .thumb__content {
     display: block;
-    height: 110px;
+    height: auto;
+    min-height: auto;
     padding: 20px;
-    width: calc(100% - 60px);
+    width: calc(100% - 50px);
   }
   .team-m .team-m__single .thumb .thumb__content .info p {
     font-size: 14px;
   }
   .team-m .team-m__single .thumb:hover .thumb__content {
-    height: 200px;
+    height: auto;
   }
   .faq .faq__thumb {
     padding-right: 0px;
