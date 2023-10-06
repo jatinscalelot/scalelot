@@ -577,7 +577,6 @@
 				prevArrow: $(".prev-service-t"),
 				nextArrow: $(".next-service-t"),
 				dots: false,
-				centerMode: true,
 				centerPadding: "0px",
 				responsive: [{
 						breakpoint: 1400,
@@ -586,13 +585,13 @@
 						},
 					},
 					{
-						breakpoint: 1200,
+						breakpoint: 900,
 						settings: {
 							slidesToShow: 2,
 						},
 					},
 					{
-						breakpoint: 768,
+						breakpoint: 576,
 						settings: {
 							slidesToShow: 1,
 						},
