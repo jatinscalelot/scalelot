@@ -40,7 +40,7 @@ const apppaths = [
   { pathUrl: '/faq', routeFile: 'faq'},
   { pathUrl: '/feedback', routeFile: 'feedback'},
   { pathUrl: '/portfolio', routeFile: 'portfolio'},
-  { pathUrl: '/projects', routeFile: 'projects'},
+  // { pathUrl: '/projects', routeFile: 'projects'},
   { pathUrl: '/services', routeFile: 'services'},
   { pathUrl: '/team', routeFile: 'team'},
 ];
