@@ -7203,6 +7203,10 @@ opacity: 0.7;
     font-size: 28px;
     font-weight: 700;
 }
+.service-t__slider .slick-track {
+  display: flex;
+  align-items: stretch;
+}
 @media (max-width: 1440px){
   .banner .interval {
     gap: 20px;
