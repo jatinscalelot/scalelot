@@ -380,11 +380,11 @@
 </html>
 <script>
 $(document).ready(function () {
-        $("#phone").intlTelInput({
-            separateDialCode: true,
-            initialCountry: "in"
-        }).on('countrychange', function (e, countryData) {
-            $("#code").val(($("#phone").intlTelInput("getSelectedCountryData").dialCode));
-        });
-    });
+   $("#phone").intlTelInput({
+      separateDialCode: true,
+      initialCountry: "in"
+   }).on('countrychange', function (e, countryData) {
+      $("#code").val(($("#phone").intlTelInput("getSelectedCountryData").dialCode));
+   });
+});
 </script>
