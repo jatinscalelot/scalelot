@@ -4068,10 +4068,11 @@ i {
   flex-direction: column;
   transition: var(--transition);
   border: 10px solid rgba(0, 0, 0, 0);
+  border-radius: 20px;
 }
-.mission-s .mission-s__single--alt:hover {
+/* .mission-s .mission-s__single--alt:hover {
   border: 10px solid var(--primary-color);
-}
+} */
 .mission-s .mission-s__single--alt h3 {
   text-transform: capitalize;
 }
