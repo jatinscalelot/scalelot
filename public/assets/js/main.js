@@ -437,7 +437,6 @@ $(function() {
 	var swiper = new Swiper(".mySwiper", {
 		slidesPerView: 1.5,
 		spaceBetween: 30,
-		centeredSlides: true,
 		autoplay: {
 			delay: 2500,
 			disableOnInteraction: false,
