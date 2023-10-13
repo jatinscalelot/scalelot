@@ -7208,6 +7208,16 @@ opacity: 0.7;
   display: flex;
   align-items: stretch;
 }
+.banner-five_swiper {
+  padding: 0 20px;
+}
+.portfolio-m .portfolio-m__single h3.light-title-lg {
+  font-size: 26px;
+  line-height: 36px;
+}
+.portfolio-m .portfolio-m__single .content{
+  padding: 30px;
+}
 @media (max-width: 1440px){
   .banner .interval {
     gap: 20px;
