@@ -7218,6 +7218,46 @@ opacity: 0.7;
 .portfolio-m .portfolio-m__single .content{
   padding: 30px;
 }
+
+
+/* popup */
+.modal-content {
+  background: #1A1A1A;
+}
+.modal-content .form-control::placeholder{
+  color: #757575;
+}
+.modal-content  .form-control option:not(:first-of-type) {
+  color: #757575 !important;
+}
+.game-landing-form .quote-input-main label, .modal-content input, .modal-content textarea{
+  color:#fff !important;
+}
+.modal-content select.form-control {
+  color: #fff !important;
+}
+.modal-title span, .modal-content .form-label span{
+  color: #EF3238;
+}
+.modal-content .form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #EF3238;
+}
+.modal-content .form-control {
+  background: transparent;
+  padding: 13px 0px;
+  border: 0px solid transparent;
+  border-bottom: 3px solid #414141;
+  border-radius: 0;
+  outline: none;
+  /* color: #fff; */
+  font-size: 16px;
+  line-height: 6px;
+}
+.modal-content .input-main.upload-file-cos label {
+  background: transparent;
+}
 @media (max-width: 1440px){
   .banner .interval {
     gap: 20px;
@@ -7295,7 +7335,7 @@ opacity: 0.7;
   }
 }
 
-@media (max-width: 400px){
+@media (max-width: 425px){
   .banner .interval {
     column-gap: 10px;
     flex-wrap: wrap;
@@ -7306,5 +7346,14 @@ opacity: 0.7;
   }
   h1, .h1, .light-title {
     line-height: 50px;
+  }
+  .slide-btn {
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    font-size: 30px;
+  }
+  .testimonial .slide-group {
+    margin-top: 20px;
   }
 }
