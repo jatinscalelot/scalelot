@@ -394,7 +394,6 @@ $(function() {
 
 			$(element).find('button[type=submit]').attr('disabled', 'disabled');
 
-
 			var randomNr1 = 0;
 			var randomNr2 = 0;
 			var totalNr = 0;
