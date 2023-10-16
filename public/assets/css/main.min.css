@@ -7258,6 +7258,12 @@ opacity: 0.7;
 .modal-content .input-main.upload-file-cos label {
   background: transparent;
 }
+.modal-content button.btn-close {
+  padding: 12px !important;
+  background-color: #fff !important;
+  border: 1px solid #fff !important;
+  border-radius: 40px;
+}
 @media (max-width: 1440px){
   .banner .interval {
     gap: 20px;
