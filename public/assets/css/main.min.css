@@ -7218,6 +7218,12 @@ opacity: 0.7;
 .portfolio-m .portfolio-m__single .content{
   padding: 30px;
 }
+.section.portfolio.portfolio-two.portfolio-filter .swiper-slide{
+  height: auto;
+}
+.section.portfolio.portfolio-two.portfolio-filter .projects-s__single.topy-tilt{
+  height: 100%;
+}
 
 
 /* popup */
@@ -7251,7 +7257,6 @@ opacity: 0.7;
   border-bottom: 3px solid #414141;
   border-radius: 0;
   outline: none;
-  /* color: #fff; */
   font-size: 16px;
   line-height: 6px;
 }
@@ -7313,7 +7318,7 @@ opacity: 0.7;
     max-width: 100%;
   }
   .banner {
-    padding: 160px 0px 100px;
+    padding: 130px 0px 100px;
   }
   .banner__content-inner p {
     font-size: 14px;
@@ -7339,6 +7344,18 @@ opacity: 0.7;
   .primary-text {
     font-size: 16px;
     line-height: 26px;
+  }
+  .section__content .title {
+    margin-bottom: 10px;
+  }
+  .paragraph p {
+    line-height: 26px;
+  }
+  .section__content-cta {
+    margin-top: 30px;
+  }
+  .gaper {
+    row-gap: 60px;
   }
 }
 

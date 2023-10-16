@@ -435,7 +435,7 @@ $(function() {
 	// swiper slider 
 
 	var swiper = new Swiper(".mySwiper", {
-		slidesPerView: 1.5,
+		slidesPerView: 1,
 		spaceBetween: 30,
 		loop: "true",
 		autoplay: {
