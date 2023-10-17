@@ -7357,6 +7357,9 @@ opacity: 0.7;
   .gaper {
     row-gap: 60px;
   }
+  .btn {
+    padding: 12px 22px;
+  }
 }
 
 @media (max-width: 425px){
