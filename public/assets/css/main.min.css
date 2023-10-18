@@ -198,7 +198,7 @@ label,
 blockquote,
 span {
   font-size: 16px;
-  line-height: 30px;
+  line-height: 26px;
   font-weight: 400;
   color: var(--theme-color);
 }
@@ -7137,6 +7137,7 @@ input#mobile_code {
 .blog-details .bd-content-info .paragraph p {
   margin-top: 10px;
   margin-bottom: 15px;
+  color: #cfcfcf;
 }
 .iti__flag-container {
   top: -18px;
