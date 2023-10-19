@@ -5447,6 +5447,10 @@ i {
   border-bottom: 2px solid #414141;
   width: 100%;
 }
+.modal-content .mob input{
+  border-bottom: 3px solid #414141;
+  padding-bottom: 20px;
+}
 .contact-m .contact-main__form input:focus,
 .contact-m .contact-main__form textarea:focus {
   border-bottom: 2px solid var(--primary-color);
