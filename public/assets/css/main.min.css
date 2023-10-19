@@ -5440,7 +5440,7 @@ i {
   width: 100%;
   margin-bottom: 40px;
 }
-.contact-m .contact-main__form input,
+.contact-m .contact-main__form input, .mob input, 
 .contact-m .contact-main__form textarea {
   background-color: rgba(0, 0, 0, 0);
   padding: 0px 16px 16px 0px;
