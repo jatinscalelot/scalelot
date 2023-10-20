@@ -7365,6 +7365,9 @@ opacity: 0.7;
   .btn {
     padding: 12px 22px;
   }
+  .portfolio-m .gaper {
+    row-gap: 30px;
+  }
 }
 
 @media (max-width: 425px){
