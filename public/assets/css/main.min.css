@@ -5440,7 +5440,7 @@ i {
   width: 100%;
   margin-bottom: 40px;
 }
-.contact-m .contact-main__form input, .mob input, 
+.contact-m .contact-main__form input, .contact-m .contact-main__form select, .mob input, 
 .contact-m .contact-main__form textarea {
   background-color: rgba(0, 0, 0, 0);
   padding: 0px 16px 16px 0px;
@@ -7274,6 +7274,12 @@ opacity: 0.7;
   border: 1px solid #fff !important;
   border-radius: 40px;
   cursor: pointer !important;
+}
+.contact-m .contact-main__form select {
+  border: 0;
+  border-bottom: 2px solid #414141;
+  outline: none;
+  color: #ddd;
 }
 @media (max-width: 1440px){
   .banner .interval {
