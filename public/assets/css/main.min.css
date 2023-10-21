@@ -7093,7 +7093,8 @@ body.light .footer-two .section__content-cta h2 a {
 }
 .form-cta label#ebcaptchatext {
   position: absolute;
-  left: 40px;
+  left: 0px;
+  top: 5px;
   font-size: 30px;
 }
 .form-cta input#ebcaptchainput {
