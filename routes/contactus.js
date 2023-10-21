@@ -14,18 +14,20 @@ router.get('/', function (req, res, next) {
 router.post('/', async (req, res) => {
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
   res.setHeader('Access-Control-Allow-Origin', '*');
-  const { name, phone, email, subject, description } = req.body;
-  if (name && name.trim() != '' && email && email.trim() != '' && (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) && company_name && company_name.trim() != '' && description && description.trim() != '') {
+  const { name, email, phone, contrycode,  subject, message } = req.body;
+  if (name && name.trim() != '' && email && email.trim() != '' && (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))) {
     let primary = mongoConnection.useDb(constants.DEFAULT_DB);
-    let checkExisting = await primary.model(constants.MODELS.getintouches, getintouchModel).findOne({ email: email }).lean();
+    let checkExisting = await primary.model(constants.MODELS.contacts, contactsModel).findOne({ email: email }).lean();
     if (checkExisting == null) {
       let obj = {
         name: name,
-        email: email,
-        company_name: company_name,
-        description: description,
+        email : email,
+        phone : phone,
+        contrycode : contrycode,
+        subject : subject,
+        message : message
       };
-      await primary.model(constants.MODELS.getintouches, getintouchModel).create(obj);
+      await primary.model(constants.MODELS.contacts, contactsModel).create(obj);
       const tranEmailApi = new Sib.TransactionalEmailsApi()
       const sender = {
         email: email,
@@ -34,14 +36,14 @@ router.post('/', async (req, res) => {
       const receivers = [
         {
           email: process.env.SIB_EMAIL_ID,
-          name: 'Festum Evento'
+          name: 'Scalelot Technologies'
         },
       ];
       tranEmailApi.sendTransacEmail({
         sender,
         to: receivers,
-        subject: name + ' Query ' + company_name,
-        htmlContent: `<h3>` + company_name + `</h3><br/><h5>` + description + `</h5>`,
+        subject: name + ' - Contacted - for - ' + subject + ' - Service',
+        htmlContent: `<h3>` + name + `</h3><br/><h5>` + email + `</h5><br/><h5>` + contrycode+phone + `</h5><br/><h5>` + message + `</h5>`,
       }).then((response) => {
         console.log('success', response);
         return responseManager.onSuccess('Thank you for getting in touch. we will reply by email as soon as possible.', 1, res);
@@ -50,10 +52,10 @@ router.post('/', async (req, res) => {
         return responseManager.onError(error, res);
       });
     } else {
-      return responseManager.badrequest({ message: 'User already send to query with same email, Please try again...' }, res);
+      return responseManager.onSuccess('User already send the contact-us request with same email, Please try again...', 0, res);
     }
   } else {
-    return responseManager.badrequest({ message: 'Invalid data to send query, please try again' }, res);
+    return responseManager.badrequest({ message: 'Invalid data to send contact-us request, please try again' }, res);
   }
 });
 module.exports = router;
