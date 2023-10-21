@@ -26,7 +26,11 @@ app.controller("contactUsController", ($scope, $http) => {
                                     },
                                 }).then(
                                     function(response) {
-                                        swal("Your request saved successfully. One of our executive will contact you shortly...", { icon: "success" });
+                                        if (response.data.IsSuccess == true && response.data.Data == 1) {
+                                            swal("Your request saved successfully. One of our executive will contact you shortly...", { icon: "success" });
+                                        }else{
+                                            swal(response.data.Message, { icon: "error" });
+                                        }
                                     },
                                     function(error) {
                                         $('#loadingdiv').hide();
