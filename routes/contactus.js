@@ -25,7 +25,8 @@ router.post('/', async (req, res) => {
         phone : phone,
         contrycode : contrycode,
         subject : subject,
-        message : message
+        message : message,
+        timestamp : Date.now()
       };
       await primary.model(constants.MODELS.contacts, contactsModel).create(obj);
       const tranEmailApi = new Sib.TransactionalEmailsApi()
