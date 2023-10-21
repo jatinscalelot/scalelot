@@ -16,7 +16,27 @@ app.controller("contactUsController", ($scope, $http) => {
                     if($scope.form.phone && $scope.form.phone != '' && $scope.form.phone.trim() != '' && $scope.form.phone.trim().length == 10 && (/^[0-9]+$/.test($scope.form.phone))){
                         if($scope.form.subject && $scope.form.subject != '' && $scope.form.subject != 'Subject'){
                             if($scope.form.message && $scope.form.message != '' && $scope.form.message.trim() != ''){
-                                
+                                $http({
+                                    url: BASE_URL + "contactus",
+                                    method: "POST",
+                                    cache: false,
+                                    data: $scope.form,
+                                    headers: {
+                                        "Content-Type": "application/json; charset=UTF-8",
+                                    },
+                                }).then(
+                                    function(response) {
+                                        swal("Your request saved successfully. One of our executive will contact you shortly...", { icon: "success" });
+                                    },
+                                    function(error) {
+                                        $('#loadingdiv').hide();
+                                        console.log(error);
+                                        HelperService.errorDetector(error);
+                                        if (error.status == 401) {
+                                            window.location.href = AUTO_LOGOUT;
+                                        }
+                                    }
+                                );
                             }else{
                                 swal('Message content can not be empty, please try again...', { icon: "error" });
                             }
