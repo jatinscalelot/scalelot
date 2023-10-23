@@ -5430,7 +5430,7 @@ i {
   display: flex;
   align-items: center;
   gap: 40px;
-  margin-bottom: 15px;
+  margin-bottom: 40px;
 }
 .contact-m .contact-main__form .group-wrapper .group-input {
   width: calc(50% - 15px);
