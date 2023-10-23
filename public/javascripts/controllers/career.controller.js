@@ -3,6 +3,6 @@ app.controller("careerController", ($scope, $http) => {
     $scope.selectedPosition = '';
     $scope.onCreereClick = (position) => {
         $scope.selectedPosition = position;
-        $('#careerModal').model('show');
+        $('#careerModal').modal('show');
     }
 });
