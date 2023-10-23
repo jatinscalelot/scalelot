@@ -7288,10 +7288,18 @@ opacity: 0.7;
   outline: none;
   color: #ddd;
 }
-.contact-m .contact-main__form select option {
+.contact-m .contact-main__form select option{
   color: #141414;
 }
-
+.team-m .team-m__single .thumb img, .team-slider-s .team-wrap .thumb img {
+  filter: grayscale(1);
+  transition: 0.3s all;
+  -webkit-filter: grayscale(1);
+}
+.team-m .team-m__single:hover .thumb img, .team-slider-s .slick-center-active .team-wrap .thumb img{
+  filter: unset;
+  transition: 0.3s all;
+}
 @media (max-width: 1440px){
   .banner .interval {
     gap: 20px;
