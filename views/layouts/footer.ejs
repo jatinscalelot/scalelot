@@ -242,13 +242,13 @@
 <!-- main js -->
 <script src="/assets/js/main.js"></script>
 </body>
-
-<div class="modal fade apply_model" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div ng-app="ScalelotModule" ng-cloak>
+<div class="modal fade apply_model" id="careerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" ng-controller="carresController">
    <div class="modal-dialog modal-xl modal-dialog-centered">
       <div class="modal-content">
          <div class="contact-form apply-now-form-cos ">
            <div class="modal-header p-0 pb-4">
-              <h2 class="modal-title text-white" id="exampleModalLabel">Apply For <span class="position">Web Designer</span></h2>
+              <h2 class="modal-title text-white" id="exampleModalLabel">Apply For <span class="position">{{selectedPosition}}</span></h2>
               <div class="p-0 border-0 modal-header"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
            </div>
           <!-- <h2>Apply Now</h2> -->
@@ -366,6 +366,7 @@
         </div>
       </div>
    </div>
+</div>
 </div>
 </html>
 <script>
