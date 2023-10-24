@@ -1,7 +1,5 @@
 var fs = require('fs');
 const { S3Client, PutObjectCommand } = require("@aws-sdk/client-s3");
-var AWS = require('aws-sdk');
-var s3 = new AWS.S3();
 const allowedContentTypes = require("./content-types");
 const bucket = process.env.AWS_BUCKET;
 let async = require('async');
