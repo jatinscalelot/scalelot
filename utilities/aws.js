@@ -38,6 +38,8 @@ async function saveToS3(buffer, parentfolder, contentType, sendorreceive) {
             };
             const command = new PutObjectCommand(putParams);
             client.send(command).then((data) => {
+                console.log('data.[metadata]', data['$metadata']);
+                console.log('data.$metadata', data.$metadata);
                 console.log('data', data);
                 resolve({ msg: 'file uploaded successfully', data: data.Key });
             }).catch((error) => {
