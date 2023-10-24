@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const multerFn = require('../utilities/multer.functions');
 const AwsCloud = require('../utilities/aws');
+const ResponseManager = require('../utilities/response.manager');
 router.post('/resumefile', multerFn.memoryUpload.single("resumefile"), async (req, res) => {
 	if (req.file) {
 		let filesizeinMb = parseFloat(parseFloat(req.file.size) / 1000000);
