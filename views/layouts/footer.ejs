@@ -341,7 +341,7 @@
                <div class="d-flex align-items-start quote-input-main">
                   <label class="form-label">Upload CV<span>*</span></label>
                   <div class="input-main upload-file-cos">
-                   <input class="form-control" type="file" id="choose-file" name="resume"  onchange="angular.element(this).scope().fileSelectedforresume(this)"><label class="w-100 form-label" for="choose-file">Choose file</label>
+                   <input class="form-control" type="file" id="choose-file" name="resume" onchange="angular.element(this).scope().fileSelectedforresume(this)"><label class="w-100 form-label" for="choose-file">Choose file</label>
                   </div>
                   <span class="limit-file">File Size Should be Less than 20 MB</span>
                </div>
@@ -350,7 +350,7 @@
                <div class="d-flex align-items-start quote-input-main">
                  <label class="form-label">Upload Workflow</label>
                  <div class="input-main upload-file-cos">
-                  <input class="form-control" type="file" id="choose-Workflow" multiple="">
+                  <input class="form-control" type="file" id="choose-Workflow" onchange="angular.element(this).scope().fileSelectedforWorkflow(this)">
                   <label class="w-100 form-label" for="choose-Workflow">Choose file</label>
                  </div>
                </div>
