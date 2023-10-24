@@ -19,6 +19,7 @@ app.controller("careerController", ($scope, $http) => {
     }
     $scope.onCreereClick = (position) => {
         $scope.career.selectedPosition = position;
+        console.log('$scope.career.selectedPosition',$scope.career.selectedPosition);
         $('#applyFor').text(position);
         $('#careerModal').modal('show');
     }
