@@ -2,7 +2,7 @@ var fs = require('fs');
 const { S3Client, PutObjectCommand } = require("@aws-sdk/client-s3");
 const client = new S3Client({ region: process.env.AWS_REGION });
 const allowedContentTypes = require("./content-types");
-const bucket = process.env.AWS_BUCKET;
+const bucket = process.env.AWS_BUCKET_NAME;
 let async = require('async');
 const { error } = require('console');
 const getBlobName = (originalName) => {
