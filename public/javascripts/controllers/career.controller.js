@@ -1,6 +1,7 @@
 app.controller("careerController", ($scope, $http) => {
     $scope.email = '';
     $scope.selectedPosition = '';
+    $scope.resumefile = null;
     $scope.career = {
         selectedPosition : '',
         first_name : '',
@@ -45,4 +46,19 @@ app.controller("careerController", ($scope, $http) => {
             portfolio : ''
         }
     });
+    $scope.fileSelectedforresume = (input) => {
+        $scope.resumefile = null;
+        if (input.files && input.files[0]) {
+            var filename = input.files[0].name;
+            var valid_extensions = /(\.jpg|\.jpeg|\.png|\.pdf|\.JPG|\.JPEG|\.PNG|\.PDF)$/i;
+            if (valid_extensions.test(filename)) {
+                $(input.files).each(function () {
+				    $scope.resumefile = input.files[0];
+					$scope.resumefileUploader();
+				});
+            } else {
+				swal("", 'Invalid File Format, Valid Format is .jpg .jpeg .png .pdf !', "error");
+			}
+        }
+    };
 });
