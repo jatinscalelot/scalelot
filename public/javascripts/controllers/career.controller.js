@@ -18,15 +18,13 @@ app.controller("careerController", ($scope, $http) => {
         portfolio : ''
     }
     $scope.onCreereClick = (position) => {
-        $scope.career.selectedPosition = position;
-        console.log('$scope.career.selectedPosition',$scope.career.selectedPosition);
         $('#applyFor').text(position);
         $('#careerModal').modal('show');
     }
     $scope.onSubmitCareer = () => {
         var dialcode = $('.iti__selected-dial-code').text();
+        $scope.career.selectedPosition = $('#applyFor').text();
         $scope.career.contrycode = dialcode;
-        console.log('clicked');
         console.log('$scope.career',  $scope.career);
     }
 });
