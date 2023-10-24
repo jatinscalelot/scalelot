@@ -38,10 +38,11 @@ async function saveToS3(buffer, parentfolder, contentType, sendorreceive) {
             };
             const command = new PutObjectCommand(putParams);
             client.send(command).then((data) => {
-                console.log('data.[metadata]', data['$metadata']);
-                console.log('data.$metadata', data.$metadata);
-                console.log('data', data);
-                resolve({ msg: 'file uploaded successfully', data: data.Key });
+                if(data && data.$metadata && data.$metadata.httpStatusCode && data.$metadata.httpStatusCode == 200){
+                    resolve({ msg: 'file uploaded successfully', data: blobName });
+                }else{
+                    reject(new Error({ msg: 'An error occurred while completing the upload' }));
+                }
             }).catch((error) => {
                 console.log('error', error);
                 reject(new Error({ msg: 'An error occurred while completing the upload' }));
