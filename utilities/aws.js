@@ -1,6 +1,13 @@
 var fs = require('fs');
 const { S3Client, PutObjectCommand } = require("@aws-sdk/client-s3");
-const client = new S3Client({ region: process.env.AWS_REGION });
+const credentials = {
+    region: process.env.AWS_REGION,
+    credentials: {
+        accessKeyId: process.env.AWS_IAM_ACCESS_KEY,
+        secretAccessKey: process.env.AWS_IAM_ACCESS_SECRET
+    }
+};
+const client = new S3Client(credentials);
 const allowedContentTypes = require("./content-types");
 const bucket = process.env.AWS_BUCKET_NAME;
 let async = require('async');
@@ -13,8 +20,8 @@ const setBlobName = (fName, extn) => {
     const identifier = Math.random().toString().replace(/0\./, '');
     return `${fName}/${fName}-${identifier}.${extn}`;
 };
-async function saveToS3(buffer, parentfolder, contentType, sendorreceive){
-    let promise = new Promise(function(resolve, reject) {
+async function saveToS3(buffer, parentfolder, contentType, sendorreceive) {
+    let promise = new Promise(function (resolve, reject) {
         let newContentType = contentType.split(";");
         let blobName = "";
         allowedContentTypes.allowedContentTypes.some((element, index) => {
@@ -32,10 +39,10 @@ async function saveToS3(buffer, parentfolder, contentType, sendorreceive){
             const command = new PutObjectCommand(putParams);
             client.send(command).then((data) => {
                 console.log('data', data);
-                resolve({msg: 'file uploaded successfully', data: data.Key});
+                resolve({ msg: 'file uploaded successfully', data: data.Key });
             }).catch((error) => {
-                console.log('error',error);
-                reject(new Error({msg: 'An error occurred while completing the upload'}));
+                console.log('error', error);
+                reject(new Error({ msg: 'An error occurred while completing the upload' }));
             });
             // s3.upload(putParams, (err, data) => {
             //     if (err) {
@@ -48,8 +55,8 @@ async function saveToS3(buffer, parentfolder, contentType, sendorreceive){
     });
     return promise;
 };
-async function saveToS3withFileName(buffer, parentfolder, contentType, filename){
-    let promise = new Promise(function(resolve, reject) {
+async function saveToS3withFileName(buffer, parentfolder, contentType, filename) {
+    let promise = new Promise(function (resolve, reject) {
         let newContentType = contentType.split(";");
         let blobName = "";
         allowedContentTypes.allowedContentTypes.some((element, index) => {
@@ -66,24 +73,24 @@ async function saveToS3withFileName(buffer, parentfolder, contentType, filename)
             };
             s3.upload(putParams, (err, data) => {
                 if (err) {
-                    reject(new Error({msg: 'An error occurred while completing the upload'}));
-                }else{
-                    resolve({msg: 'file uploaded successfully', data: data.Key});
+                    reject(new Error({ msg: 'An error occurred while completing the upload' }));
+                } else {
+                    resolve({ msg: 'file uploaded successfully', data: data.Key });
                 }
             });
         }
     });
     return promise;
 };
-async function deleteFromS3(fileKey){
-    let promise = new Promise(function(resolve, reject) {
+async function deleteFromS3(fileKey) {
+    let promise = new Promise(function (resolve, reject) {
         var params = {
             Bucket: bucket,
             Key: fileKey
         };
-        s3.deleteObject(params, function(err, data) {
-            if (err) reject(new Error({msg: 'An error occurred while deleting the file'}));
-            else resolve({msg: 'file deleted successfully', data: data});
+        s3.deleteObject(params, function (err, data) {
+            if (err) reject(new Error({ msg: 'An error occurred while deleting the file' }));
+            else resolve({ msg: 'file deleted successfully', data: data });
         });
     });
     return promise;
