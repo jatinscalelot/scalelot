@@ -27,4 +27,22 @@ app.controller("careerController", ($scope, $http) => {
         $scope.career.contrycode = dialcode;
         console.log('$scope.career',  $scope.career);
     }
+    $('#careerModal').on('hidden.bs.modal', function () {
+        $scope.career = {
+            selectedPosition : '',
+            first_name : '',
+            middle_name : '',
+            last_name : '',
+            email : '',
+            phone : '',
+            contrycode : '+91',
+            city : '',
+            experience : '',
+            position : '',
+            joining : '',
+            message : '',
+            cv : '',
+            portfolio : ''
+        }
+    });
 });
