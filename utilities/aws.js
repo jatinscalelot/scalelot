@@ -1,5 +1,6 @@
 var fs = require('fs');
 const { S3Client, PutObjectCommand } = require("@aws-sdk/client-s3");
+const client = new S3Client();
 const allowedContentTypes = require("./content-types");
 const bucket = process.env.AWS_BUCKET;
 let async = require('async');
@@ -29,7 +30,7 @@ async function saveToS3(buffer, parentfolder, contentType, sendorreceive){
                 ContentType: contentType
             };
             const command = new PutObjectCommand(putParams);
-            S3Client.send(command).then((data) => {
+            client.send(command).then((data) => {
                 console.log('data', data);
                 resolve({msg: 'file uploaded successfully', data: data.Key});
             }).catch((error) => {
