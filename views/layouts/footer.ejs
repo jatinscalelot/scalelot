@@ -255,13 +255,13 @@
               <label class="form-label">Name <span>*</span></label>
               <div class="input-main d-flex align-items-start gap-3">
                 <div class="w-100">
-                  <input type="text" class="w-100 form-control" placeholder="First Name" name="first_name" value="">
+                  <input type="text" class="w-100 form-control" placeholder="First Name" name="first_name" ng-model="career.first_name">
                 </div>
                 <div class="w-100">
-                  <input type="text" class="w-100 form-control" placeholder="Middle Name" name="middle_name" value="">
+                  <input type="text" class="w-100 form-control" placeholder="Middle Name" name="middle_name" ng-model="career.middle_name">
                 </div>
                 <div class="w-100">
-                  <input type="text" class="w-100 form-control" placeholder="Last Name" name="last_name" value="">
+                  <input type="text" class="w-100 form-control" placeholder="Last Name" name="last_name" ng-model="career.last_name">
                 </div>
               </div>
             </div>
@@ -269,7 +269,7 @@
                <div class="d-flex align-items-center quote-input-main">
                  <label class="form-label">Email <span>*</span></label>
                  <div class="input-main ">
-                  <input type="text" class="w-100 form-control" placeholder="Enter Your Email ID" name="email" value="">
+                  <input type="text" class="w-100 form-control" placeholder="Enter Your Email ID" name="email" ng-model="career.email">
                  </div>
                </div>
             </div>
@@ -277,7 +277,7 @@
                <div class="d-flex align-items-center quote-input-main">
                  <label class="form-label">Contact Number<span>*</span></label>
                  <div class="group-input mob">
-                     <input type="phone" id="phone" ng-model="form.phone" placeholder="Phone Number">
+                     <input type="phone" id="phone" ng-model="career.phone" placeholder="Phone Number">
                  </div>
                </div>
             </div>
@@ -285,7 +285,7 @@
                <div class="d-flex align-items-center quote-input-main">
                  <label class="form-label">City<span>*</span></label>
                  <div class="input-main ">
-                  <input type="text" class="w-100 form-control" placeholder="City" name="city" value="">
+                  <input type="text" class="w-100 form-control" placeholder="City" name="city" ng-model="career.city">
                  </div>
                </div>
             </div>
@@ -293,12 +293,12 @@
                <div class="d-flex align-items-center quote-input-main">
                   <label class="form-label">Experience<span>*</span></label>
                   <div class="input-main ">
-                    <select class="w-100 form-control" name="experience">
+                    <select class="w-100 form-control" name="experience" ng-model="career.experience">
                       <option value="">-Select-</option>
-                      <option>Fresher</option>
-                      <option>1-3 Year</option>
-                      <option>3-5 Year</option>
-                      <option>More than 5 Year</option>
+                      <option value="Fresher">Fresher</option>
+                      <option value="1-3 Year">1-3 Year</option>
+                      <option value="3-5 Year">3-5 Year</option>
+                      <option value="More than 5 Year">More than 5 Year</option>
                     </select>
                   </div>
                </div>
@@ -307,11 +307,11 @@
                <div class="d-flex align-items-center quote-input-main">
                   <label class="form-label">Select Position <span>*</span></label>
                   <div class="input-main ">
-                    <select class="w-100 form-control" name="position">
+                    <select class="w-100 form-control" name="position" ng-model="career.position">
                       <option value="">-Select-</option>
-                      <option>Junior</option>
-                      <option>Senior</option>
-                      <option>Team Leader</option>
+                      <option value="Junior">Junior</option>
+                      <option value="Senior">Senior</option>
+                      <option value="Team Leader">Team Leader</option>
                     </select>
                   </div>
                </div>
@@ -320,11 +320,11 @@
                <div class="d-flex align-items-center quote-input-main">
                   <label class="form-label">Joining<span>*</span></label>
                   <div class="input-main">
-                    <select class="w-100 form-control" name="joint">
+                    <select class="w-100 form-control" name="joining" ng-model="career.joining">
                       <option value="">-Select-</option>
-                      <option>Immediately</option>
-                      <option>In a Week</option>
-                      <option>In a Month</option>
+                      <option value="Immediately">Immediately</option>
+                      <option value="In a Week">In a Week</option>
+                      <option value="In a Month">In a Month</option>
                     </select>
                   </div>
                </div>
@@ -333,7 +333,7 @@
                <div class="d-flex align-items-start quote-input-main">
                  <label class="form-label">Message</label>
                  <div class="input-main d-flex align-items-center gap-3">
-                  <textarea class="w-100 form-control" placeholder="Write a Message" rows="2" name="message"></textarea>
+                  <textarea class="w-100 form-control" placeholder="Write a Message" rows="2" name="message" ng-model="career.message"></textarea>
                  </div>
                </div>
             </div>
