@@ -7,4 +7,7 @@ app.controller("careerController", ($scope, $http) => {
         $('#applyFor').text(position);
         $('#careerModal').modal('show');
     }
+    $scope.onSubmitCareer = () => {
+        console.log('clicked');
+    }
 });
