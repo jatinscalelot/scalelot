@@ -62,7 +62,7 @@ app.controller("careerController", ($scope, $http) => {
 					if (response.data.IsSuccess == true) {
 						if(response.data.Data){
                             $scope.career.cv = response.data.Data;
-                            swal("Your portfolio file uploaded successfully...", { icon: "success" });
+                            swal("Your resume file uploaded successfully...", { icon: "success" });
                         }else{
                             swal("", 'Some-thing went wrong while uploading the file! Please try again', "error");
                         }
