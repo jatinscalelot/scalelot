@@ -254,7 +254,7 @@ router.post('/', async (req, res) => {
                                                                                 <tr style="font-size: 14px; vertical-align: top; color: #fff; background: rgba(255,255,255,0.1); font-weight: 500; font-family: 'Helvetica Neue';">
                                                                                    <td style="white-space: nowrap; padding: 12px 15px; padding-right: 10px;">Full Name</td>
                                                                                    <td style="padding: 12px 0px;">:</td>
-                                                                                   <td style="padding: 12px 10px;">`+first_name+` `+middle_name+` `+last_name`</td>
+                                                                                   <td style="padding: 12px 10px;">`+first_name+` `+middle_name+` `+last_name+`</td>
                                                                                 </tr>
                                                                                 <tr style="font-size: 14px; vertical-align: top; color: #fff; background: rgba(255,255,255,0.1); font-weight: 500; font-family: 'Helvetica Neue';">
                                                                                    <td style="white-space: nowrap; padding: 12px 15px; padding-right: 10px;">Email</td>
