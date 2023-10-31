@@ -39,7 +39,7 @@ router.post('/', async (req, res) => {
         { "email": process.env.SIB_EMAIL_ID, "name": "Scalelot Technologies" }
       ];
       sendSmtpEmail.replyTo = { "email": email, "name": name };
-      sendSmtpEmail.headers = {};
+      // sendSmtpEmail.headers = {};
       sendSmtpEmail.params = { "subject": name + ' - Contacted - for - ' + subject + ' - Service' };
       apiInstance.sendTransacEmail(sendSmtpEmail).then(function (data) {
         sendSmtpEmailTouser.subject = 'Welcome to Scalelot Technologies! ' + name + ' - Contacted - for - ' + subject + ' - Service';
@@ -1452,7 +1452,7 @@ router.post('/', async (req, res) => {
           { "email": email, "name": name }
         ];
         sendSmtpEmailTouser.replyTo = { "email": process.env.SIB_EMAIL_ID, "name": "Scalelot Technologies" };
-        sendSmtpEmailTouser.headers = {};
+        // sendSmtpEmailTouser.headers = {};
         sendSmtpEmailTouser.params = { "subject": name + ' - Contacted - for - ' + subject + ' - Service' };
         apiInstance.sendTransacEmail(sendSmtpEmailTouser).then((data) => {
           return responseManager.onSuccess('Thank you for getting in touch. we will reply by email as soon as possible.', 1, res);
