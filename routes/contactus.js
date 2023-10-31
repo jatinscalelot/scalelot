@@ -1467,9 +1467,11 @@ router.post('/', async (req, res) => {
         }).then((responsex) => {
           return responseManager.onSuccess('Thank you for getting in touch. we will reply by email as soon as possible.', 1, res);
         }).catch((error) => {
+          console.log('error1', error);
           return responseManager.onError(error, res);
         });
       }).catch((error) => {
+        console.log('error2', error);
         return responseManager.onError(error, res);
       });
     } else {
