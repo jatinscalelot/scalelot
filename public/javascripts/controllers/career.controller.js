@@ -53,6 +53,22 @@ app.controller("careerController", ($scope, $http) => {
                                                                     function(response) {
                                                                         if (response.data.IsSuccess == true && response.data.Data == 1) {
                                                                             swal("Your Application has been saved successfully. You will get call & email from our executive for the interview, Stay tune...", { icon: "success" });
+                                                                            $scope.career = {
+                                                                                selectedPosition : '',
+                                                                                first_name : '',
+                                                                                middle_name : '',
+                                                                                last_name : '',
+                                                                                email : '',
+                                                                                phone : '',
+                                                                                contrycode : '+91',
+                                                                                city : '',
+                                                                                experience : '',
+                                                                                position : '',
+                                                                                joining : '',
+                                                                                message : '',
+                                                                                cv : '',
+                                                                                portfolio : ''
+                                                                            }
                                                                         }else{
                                                                             swal(response.data.Message, { icon: "error" });
                                                                         }
