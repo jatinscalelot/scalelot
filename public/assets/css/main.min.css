@@ -7311,6 +7311,7 @@ section.banner video {
   height: 100%;
   object-fit: cover;
   opacity: 0.3;
+  z-index: -1;
 }
 @media (max-width: 1440px){
   .banner .interval {
@@ -7414,6 +7415,9 @@ section.banner video {
 }
 
 @media (max-width: 425px){
+  .banner h1 .text-stroke {
+    -webkit-text-stroke: 0.5px #fff !important;
+  }
   .banner .interval {
     column-gap: 10px;
     flex-wrap: wrap;
