@@ -7443,7 +7443,6 @@ section.banner video {
     max-width: 500px;
   }
 }
-
 @media (max-width: 425px){
   .banner h1 .text-stroke {
     -webkit-text-stroke: 0.5px #fff !important;
