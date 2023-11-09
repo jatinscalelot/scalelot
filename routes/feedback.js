@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
 router.get('/', function(req, res, next) {
-  res.render('feedback', { title: 'Scalelot - Treat With Technologies' });
+  res.render('feedback', { title: 'Scalelot - Treat With Technologies', page : 'feedback' });
 });
 module.exports = router;

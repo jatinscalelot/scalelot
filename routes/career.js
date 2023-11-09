@@ -11,7 +11,7 @@ const responseManager = require('../utilities/response.manager');
 const constants = require('../utilities/constants');
 const careerModel = require('../models/careers.model');
 router.get('/', async (req, res) => {
-  res.render('career', { title: 'Scalelot - Treat With Technologies' });
+  res.render('career', { title: 'Scalelot - Treat With Technologies', page : 'career' });
 });
 router.post('/', async (req, res) => {
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');

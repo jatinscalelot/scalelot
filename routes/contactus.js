@@ -12,7 +12,7 @@ const responseManager = require('../utilities/response.manager');
 const constants = require('../utilities/constants');
 const contactsModel = require('../models/contacts.model');
 router.get('/', function (req, res, next) {
-  res.render('contactus', { title: 'Scalelot - Treat With Technologies' });
+  res.render('contactus', { title: 'Scalelot - Treat With Technologies', page : 'contactus' });
 });
 router.post('/', async (req, res) => {
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');

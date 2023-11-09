@@ -11,7 +11,7 @@ const responseManager = require('../utilities/response.manager');
 const constants = require('../utilities/constants');
 const subscriberModel = require('../models/subscribers.model');
 router.get('/', async (req, res) => {
-  res.render('aboutus', { title: 'Scalelot - Treat With Technologies' });
+  res.render('aboutus', { title: 'Scalelot - Treat With Technologies' , page : 'aboutus'});
 });
 router.post('/', async (req, res) => {
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
