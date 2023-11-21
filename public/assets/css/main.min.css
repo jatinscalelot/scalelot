@@ -7325,6 +7325,9 @@ section.banner video {
 .banner__content-inner .para_mob{
   display: none;
 }
+.au_btn{
+  margin-bottom: 0;
+}
 @media (max-width: 1440px){
   .banner .interval {
     gap: 20px;
@@ -7422,7 +7425,7 @@ section.banner video {
   .section__content-cta {
     margin-top: 30px;
   }
-  .gaper {
+  .offer .gaper, .agency .gaper {
     row-gap: 60px;
   }
   .btn {
@@ -7473,5 +7476,17 @@ section.banner video {
   }
   .blog-main .blog-main__single .thumb, .blog-main .blog-main__single .content {
     padding: 15px;
+  }
+  .offer .offer__cta .offer__cta-single {
+    margin-bottom: 20px;
+  }
+  .blog.blog-two .section__header--secondary {
+    margin-bottom: -20px;
+  }
+  .blog.blog-two .section__header--secondary .gaper {
+    row-gap: 20px;
+  }
+  .footer-two .footer__copyright {
+    margin-top: 45px;
   }
 }
