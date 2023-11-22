@@ -5965,6 +5965,10 @@ body.light .light .sub-title {
   background-color: #fff;
   border-color: #d9d9d9;
 }
+.section__content-cta h2 {
+  font-size: 36px;
+  line-height: 50px;
+}
 @media only screen and (max-width: 1699.98px) {
   .primary-navbar .navbar__sub-menu__nested {
     left: calc(100% - 24px);
@@ -6008,6 +6012,10 @@ body.light .light .sub-title {
 @media only screen and (max-width: 1439.98px) {
   .contact-m .contact-m__single {
     padding: 40px 20px;
+  }
+  h4 {
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 @media only screen and (max-width: 1399.98px) {
@@ -7102,10 +7110,6 @@ body.light .footer-two .section__content-cta h2 a {
   padding-left: 120px;
   font-size: 28px;
 }
-.section__content-cta h2 {
-  font-size: 36px;
-  line-height: 50px;
-}
 .footer-two__left .section__content-cta {
   margin-top: 30px;
 }
@@ -7328,6 +7332,7 @@ section.banner video {
 .au_btn{
   margin-bottom: 0;
 }
+
 @media (max-width: 1440px){
   .banner .interval {
     gap: 20px;
@@ -7340,6 +7345,22 @@ section.banner video {
   .primary-navbar .navbar{
     gap: 20;
   }
+}
+@media(max-width: 1366px){
+  .banner__content h1.title-anim {
+    font-size: 65px;
+    line-height: 85px;
+    max-width: 760px;
+  }
+  .secondary--navbar {
+    padding: 30px;
+  }
+  .banner {
+    padding: 200px 0px 130px;
+  }
+  .banner-five_swiper .projects-s__single {
+    padding: 20px;
+  }  
 }
 @media (max-width: 1280px){
   .mission-s .mission-s__single--alt {
@@ -7447,6 +7468,11 @@ section.banner video {
   }
 }
 @media (max-width: 425px){
+  .footer-two .social a {
+    width: 45px;
+    min-width: 45px;
+    height: 45px;
+  }
   .banner h1 .text-stroke {
     -webkit-text-stroke: 0.5px #fff !important;
   }
