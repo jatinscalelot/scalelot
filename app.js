@@ -43,6 +43,7 @@ const apppaths = [
   { pathUrl: '/upload', routeFile: 'upload'},
   { pathUrl: '/services', routeFile: 'services'},
   { pathUrl: '/team', routeFile: 'team'},
+  { pathUrl: '/epcasestudy', routeFile: 'epcasestudy'},
   { pathUrl : '/sitemap.xml', routeFile: 'sitemap'}
 ];
 apppaths.forEach((path) => {
