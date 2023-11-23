@@ -44,6 +44,15 @@ const apppaths = [
   { pathUrl: '/services', routeFile: 'services'},
   { pathUrl: '/team', routeFile: 'team'},
   { pathUrl: '/epcasestudy', routeFile: 'epcasestudy'},
+  { pathUrl: '/ffcasestudy', routeFile: 'ffcasestudy'},
+  { pathUrl: '/fecasestudy', routeFile: 'fecasestudy'},
+  { pathUrl: '/gwb', routeFile: 'gwb'},
+  { pathUrl: '/richero', routeFile: 'richero'},
+  { pathUrl: '/remtox', routeFile: 'remtox'},
+  { pathUrl: '/kalix', routeFile: 'kalix'},
+  { pathUrl: '/credithikers', routeFile: 'credithikers'},
+  { pathUrl: '/simpleenglish', routeFile: 'simpleenglish'},
+  
   { pathUrl : '/sitemap.xml', routeFile: 'sitemap'}
 ];
 apppaths.forEach((path) => {
