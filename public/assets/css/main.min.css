@@ -7529,4 +7529,8 @@ section.banner video {
   .c_orner {
     align-items:  baseline;
   }
+  .blog-details .bd-content-info .paragraph {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
 }
