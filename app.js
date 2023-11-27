@@ -51,12 +51,14 @@ const apppaths = [
   { pathUrl: '/remtox', routeFile: 'remtox'},
   { pathUrl: '/kalix', routeFile: 'kalix'},
   { pathUrl: '/credithikers', routeFile: 'credithikers'},
-  { pathUrl: '/simpleenglish', routeFile: 'simpleenglish'},
-  
-  { pathUrl : '/sitemap.xml', routeFile: 'sitemap'}
+  { pathUrl: '/simpleenglish', routeFile: 'simpleenglish'}
 ];
 apppaths.forEach((path) => {
 	app.use(path.pathUrl, require('./routes/' + path.routeFile));
+});
+app.get('/sitemap.xml', (req, res) => {
+  res.contentType('application/xml');
+  res.sendFile(path.join(__dirname , 'sitemap.xml'));
 });
 app.use(function(req, res, next) {
   next(createError(404));
