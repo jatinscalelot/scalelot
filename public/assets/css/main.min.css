@@ -7382,6 +7382,14 @@ section.banner video {
     line-height: 75px;
     max-width: 700px;
   }
+  header.header .secondary--navbar {
+    padding: 15px 0;
+  }
+  .secondary--navbar .open-offcanvas-nav {
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+  }
 }
 @media (max-width: 767px){
   .banner__content-inner .para_dask{
@@ -7476,6 +7484,14 @@ section.banner video {
   .blog-details .bd-meta .meta__left {
     flex-wrap: wrap;
     gap: 5px;
+  }
+  .secondary--navbar .open-offcanvas-nav {
+    width: 45px;
+    min-width: 45px;
+    height: 45px;
+  }
+  header.header .secondary--navbar {
+    padding: 12px 0;
   }
 }
 @media (max-width: 425px){
