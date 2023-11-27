@@ -243,7 +243,6 @@
 <!-- main js -->
 <script src="/assets/js/main.js"></script>
 
-
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GG7Y3VFD6"></script>
 <script>
@@ -390,15 +389,14 @@
 </body>
 </html>
 <script>
-$(document).ready(function () {
-   $("#phone").intlTelInput({
-      separateDialCode: true,
-      initialCountry: "in"
-   }).on('countrychange', function (e, countryData) {
-      $("#code").val(($("#phone").intlTelInput("getSelectedCountryData").dialCode));
+   $(document).ready(function () {
+      $("#phone").intlTelInput({
+         separateDialCode: true,
+         initialCountry: "in"
+      }).on('countrychange', function (e, countryData) {
+         $("#code").val(($("#phone").intlTelInput("getSelectedCountryData").dialCode));
+      });
    });
-});
-
 </script>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
