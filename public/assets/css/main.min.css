@@ -7156,12 +7156,28 @@ input#mobile_code {
   max-width: 1440px !important;
 }
 /* cureer op_positions */
+.positions_card{
+  padding: 25px;
+}
 .op_positions .po_titel.h3 {
   color: #EF3238;
   font-weight: 700;
+  font-size: 20px;
+}
+.po_details, .po_details .btn_apply {
+  margin-top: 30px;
+}
+.po_details .h_info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.po_details .h_info h5{
+  font-size: 16px;
 }
 .op_positions .sub_details{
 opacity: 0.7;
+font-size: 16px;
 }
 .paragraph p b {
   color: #EF3238;
