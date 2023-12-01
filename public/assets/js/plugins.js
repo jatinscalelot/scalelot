@@ -224,43 +224,6 @@
 			cssEase: "linear",
 		});
 
-		// 08. portfolio filter
-		function masonryMain() {
-			if ($(".masonry-grid").length) {
-				var $grid = $(".masonry-grid").isotope({
-					itemSelector: ".grid-item-main",
-					layoutMode: "fitRows",
-				});
-
-				var filterFns = {
-					all: function() {
-						return true;
-					},
-				};
-				$(".portfolio-two__filter-btn").on("click", "button", function() {
-					var filterValue = $(this).attr("data-filter");
-					filterValue = filterFns[filterValue] || filterValue;
-					$grid.isotope({
-						filter: filterValue
-					});
-				});
-
-				$(".portfolio-two__filter-btn").each(function(i, buttonGroup) {
-					var $buttonGroup = $(buttonGroup);
-					$buttonGroup.on("click", "button", function() {
-						$buttonGroup.find(".active").removeClass("active");
-						$(this).addClass("active");
-					});
-				});
-
-				$grid.isotope({
-					transitionDuration: "1200ms",
-				});
-			}
-		}
-
-		masonryMain();
-
 		// 09. testimonial two slider
 		$(".testimonial-two__slider").not(".slick-initialized").slick({
 			infinite: true,
@@ -1112,3 +1075,40 @@
 		}
 	});
 })(jQuery);
+
+		// 08. portfolio filter
+		function masonryMain() {
+			if ($(".masonry-grid").length) {
+				var $grid = $(".masonry-grid").isotope({
+					itemSelector: ".grid-item-main",
+					layoutMode: "fitRows",
+				});
+
+				var filterFns = {
+					all: function() {
+						return true;
+					},
+				};
+				$(".portfolio-two__filter-btn").on("click", "button", function() {
+					var filterValue = $(this).attr("data-filter");
+					filterValue = filterFns[filterValue] || filterValue;
+					$grid.isotope({
+						filter: filterValue
+					});
+				});
+
+				$(".portfolio-two__filter-btn").each(function(i, buttonGroup) {
+					var $buttonGroup = $(buttonGroup);
+					$buttonGroup.on("click", "button", function() {
+						$buttonGroup.find(".active").removeClass("active");
+						$(this).addClass("active");
+					});
+				});
+
+				$grid.isotope({
+					transitionDuration: "800ms",
+				});
+			}
+		}
+
+		masonryMain();
