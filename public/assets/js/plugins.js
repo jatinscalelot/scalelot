@@ -81,7 +81,6 @@
      
     ==================================================
 ============== */
-
 (function($) {
 	"use strict";
 
@@ -1126,8 +1125,8 @@
 				$(this).addClass('active');
 			});
 
-			$grid.isotope({
-				transitionDuration: "1200ms",
-			});
+			// $grid.isotope({
+			// 	transitionDuration: "1200ms",
+			// });
 			
 		});
