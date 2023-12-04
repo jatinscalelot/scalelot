@@ -275,7 +275,48 @@
       });
    });
 
-   $(function(){
-      $('#container_por').mixItUp();
-   });
+   // fillter gallery 
+
+     // 이미지 로딩 대기
+	$('.masonry-grid').imagesLoaded(function(){
+		// masonry-grid 배치
+		$('.masonry-grid').isotope({
+		  // options
+		  itemSelector: '.grid-item-main',
+		  layoutMode: 'fitRows'
+		});
+	});
+
+
+	// 아이템 필터링
+	$('.btn_fil.all').click(function(){
+		$('.masonry-grid').isotope({
+			filter: '*'
+		})			
+	});
+
+	$('.btn_fil.website').click(function(){
+		$('.masonry-grid').isotope({
+			filter: '.website'
+		})
+	});
+
+	$('.btn_fil.app').click(function(){
+		$('.masonry-grid').isotope({
+			filter: '.app'
+		})
+	});
+
+	$('.btn_fil.graphics').click(function(){
+		$('.masonry-grid').isotope({
+			filter: '.graphics'
+		})
+	});
+
+
+	// 버튼 on 처리
+	$('.btn_fil').click(function(){
+		$('.btn').removeClass('active');
+		$(this).toggleClass('active');
+	});
 </script>
