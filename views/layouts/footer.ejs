@@ -1,5 +1,5 @@
   <!-- ==== footer start ==== -->
-  <footer class="footer-two section pb-0">
+<footer class="footer-two section pb-0">
    <div class="container">
       <div class="row gaper">
          <div class="col-12 col-lg-5 col-xl-4">
@@ -275,7 +275,9 @@
       });
    });
 
-   // fillter gallery 
+
+
+   // fillter image gallery 
 
      // 이미지 로딩 대기
 	$('.masonry-grid').imagesLoaded(function(){
@@ -319,4 +321,31 @@
 		$('.btn').removeClass('active');
 		$(this).toggleClass('active');
 	});
+</script>
+<script>
+      $(document).ready(function(){
+
+      $(".filter-button").click(function(){
+         var value = $(this).attr('data-filter');
+         
+         if(value == "all")
+         {
+            //$('.filter').removeClass('hidden');
+            $('.filter').show('1000');
+         }
+         else
+         {   //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+      //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+            $(".filter").not('.'+value).hide('3000');
+            $('.filter').filter('.'+value).show('3000');
+            
+         }
+      });
+
+      if ($(".filter-button").removeClass("active")) {
+      $(this).removeClass("active");
+      }
+      $(this).addClass("active");
+
+      });
 </script>
