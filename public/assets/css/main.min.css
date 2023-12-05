@@ -7353,6 +7353,12 @@ section.banner video {
   align-items: center;
   padding: 5px 0;
 }
+.portfolio_p.hide {
+  display: none;
+}
+ .portfolio.show {
+  animation: fadeIn 0.5s ease;
+ }  
 @media (max-width: 1440px){
   .banner .interval {
     gap: 20px;
