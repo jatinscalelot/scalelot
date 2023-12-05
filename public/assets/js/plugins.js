@@ -1111,74 +1111,22 @@
 		// }
 		// masonryMain();
 
-		$(document).ready(function(){
-				// fillter image gallery 
-					// 이미지 로딩 대기
-				$('.masonry_grid').imagesLoaded(function(){
-					// masonry-grid 배치
-					$('.masonry_grid').isotope({
-						// options
-						itemSelector: '.grid-item-main',
-						layoutMode: 'fitRows'
-					});
-				});
-				// 아이템 필터링
-				$('.btn_fil.all').click(function(){
-					$('.masonry_grid').isotope({
-						filter: '*'
-					})			
-				});
+		$(document).ready( function() {   
 
-				$('.btn_fil.website').click(function(){
-					$('.masonry_grid').isotope({
-						filter: '.website'
-					})
-				});
+			$('.masonry-grid').isotope({
+				itemSelector: '.grid-item-main',
+			});
+			
+			// filter items on button click
+			$('.portfolio-two__filter-btn').on( 'click', 'button', function() {
+				var filterValue = $(this).attr('data-filter');
+				$('.masonry-grid').isotope({ filter: filterValue });
+				$('.portfolio-two__filter-btn button').removeClass('active');
+				$(this).addClass('active');
+			});
 
-				$('.btn_fil.app').click(function(){
-					$('.masonry_grid').isotope({
-						filter: '.app'
-					})
-				});
-
-				$('.btn_fil.graphics').click(function(){
-					$('.masonry_grid').isotope({
-						filter: '.graphics'
-					})
-				});
-
-				// 버튼 on 처리
-				$('.btn_fil').click(function(){
-					$('.btn').removeClass('active');
-					$(this).toggleClass('active');
-				});
-
+			// $grid.isotope({
+			// 	transitionDuration: "1200ms",
+			// });
+			
 		});
-		
-
-
-		$(document).ready(function(){
-
-      $(".filter-button").click(function(){
-         var value = $(this).attr('data-filter');
-         
-         if(value == "all")
-         {
-            //$('.filter').removeClass('hidden');
-            $('.filter').show('1000');
-         }
-         else
-         {   //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-      //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-            $(".filter").not('.'+value).hide('3000');
-            $('.filter').filter('.'+value).show('3000');
-            
-         }
-      });
-
-      if ($(".filter-button").removeClass("active")) {
-      $(this).removeClass("active");
-      }
-      $(this).addClass("active");
-
-	});
