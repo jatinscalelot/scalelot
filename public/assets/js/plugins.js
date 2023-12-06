@@ -571,7 +571,7 @@
 				focusOnSelect: true,
 				slidesToShow: 4,
 				speed: 1000,
-				autoplaySpeed: 5000,
+				autoplaySpeed: 3000,
 				slidesToScroll: 1,
 				arrows: true,
 				prevArrow: $(".prev-service-t"),
