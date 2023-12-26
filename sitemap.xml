@@ -1,87 +1,124 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
 <url>
-  <loc>https://www.scalelot.com/</loc>
-  <lastmod>2023-10-31T09:45:12+00:00</lastmod>
-  <priority>1.00</priority>
+<loc>https://www.scalelot.com/</loc>
+<lastmod>2023-12-25T08:51:15+00:00</lastmod>
+<priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.scalelot.com/aboutus</loc>
-  <lastmod>2023-10-31T09:45:12+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.scalelot.com/aboutus</loc>
+<lastmod>2023-12-25T08:51:15+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.scalelot.com/services</loc>
-  <lastmod>2023-10-31T09:45:12+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.scalelot.com/services</loc>
+<lastmod>2023-12-25T08:51:15+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.scalelot.com/faq</loc>
-  <lastmod>2023-10-31T09:45:12+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.scalelot.com/faq</loc>
+<lastmod>2023-12-25T08:51:15+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.scalelot.com/career</loc>
-  <lastmod>2023-10-31T09:45:12+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.scalelot.com/career</loc>
+<lastmod>2023-12-25T08:51:15+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.scalelot.com/blog</loc>
-  <lastmod>2023-10-31T09:45:12+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.scalelot.com/blog</loc>
+<lastmod>2023-12-25T08:51:15+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.scalelot.com/team</loc>
-  <lastmod>2023-10-31T09:45:12+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.scalelot.com/team</loc>
+<lastmod>2023-12-25T08:51:15+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.scalelot.com/feedback</loc>
-  <lastmod>2023-10-31T09:45:12+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.scalelot.com/feedback</loc>
+<lastmod>2023-12-25T08:51:15+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.scalelot.com/contactus</loc>
-  <lastmod>2023-10-31T09:45:12+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.scalelot.com/contactus</loc>
+<lastmod>2023-12-25T08:51:15+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.scalelot.com/portfolio</loc>
-  <lastmod>2023-10-31T09:45:12+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.scalelot.com/portfolio</loc>
+<lastmod>2023-12-25T08:51:15+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.scalelot.com/services/webdevelopment</loc>
-  <lastmod>2023-10-31T09:45:12+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://www.scalelot.com/epcasestudy</loc>
+<lastmod>2023-12-25T08:51:15+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.scalelot.com/services/applicationdevelopment</loc>
-  <lastmod>2023-10-31T09:45:12+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://www.scalelot.com/ffcasestudy</loc>
+<lastmod>2023-12-25T08:51:15+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.scalelot.com/services/uiuxdesign</loc>
-  <lastmod>2023-10-31T09:45:12+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://www.scalelot.com/fecasestudy</loc>
+<lastmod>2023-12-25T08:51:15+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.scalelot.com/services/digitalmarketing</loc>
-  <lastmod>2023-10-31T09:45:12+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://www.scalelot.com/gwb</loc>
+<lastmod>2023-12-25T08:51:15+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.scalelot.com/services/contentcreation</loc>
-  <lastmod>2023-10-31T09:45:12+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://www.scalelot.com/richero</loc>
+<lastmod>2023-12-25T08:51:15+00:00</lastmod>
+<priority>0.80</priority>
 </url>
-
-
+<url>
+<loc>https://www.scalelot.com/remtox</loc>
+<lastmod>2023-12-25T08:51:15+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.scalelot.com/kalix</loc>
+<lastmod>2023-12-25T08:51:15+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.scalelot.com/credithikers</loc>
+<lastmod>2023-12-25T08:51:15+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.scalelot.com/simpleenglish</loc>
+<lastmod>2023-12-25T08:51:15+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.scalelot.com/services/webdevelopment</loc>
+<lastmod>2023-12-25T08:51:15+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.scalelot.com/services/applicationdevelopment</loc>
+<lastmod>2023-12-25T08:51:15+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.scalelot.com/services/uiuxdesign</loc>
+<lastmod>2023-12-25T08:51:15+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.scalelot.com/services/digitalmarketing</loc>
+<lastmod>2023-12-25T08:51:15+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.scalelot.com/services/contentcreation</loc>
+<lastmod>2023-12-25T08:51:15+00:00</lastmod>
+<priority>0.64</priority>
+</url>
 </urlset>
