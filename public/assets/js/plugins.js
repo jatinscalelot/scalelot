@@ -750,34 +750,6 @@
 			});
 		}
 
-		// 27. split title
-		if (device_width > 576) {
-			let char_come = gsap.utils.toArray(".title-anim");
-
-			char_come.forEach((char_come) => {
-				let split_char = new SplitText(char_come, {
-					type: "chars, words",
-					lineThreshold: 0.5,
-				});
-				const tl2 = gsap.timeline({
-					scrollTrigger: {
-						trigger: char_come,
-						start: "top 90%",
-						end: "bottom 60%",
-						scrub: false,
-						markers: false,
-						toggleActions: "play none none none",
-					},
-				});
-				tl2.from(split_char.chars, {
-					duration: 0.8,
-					x: 70,
-					autoAlpha: 0,
-					stagger: 0.03,
-				});
-			});
-		}
-
 		// 28. fade animations
 		if ($(".fade-left").length > 0) {
 			if (device_width > 576) {
@@ -1112,28 +1084,32 @@
 		}
 	});
 })(jQuery);
-
 		
 
-const filterContainer = document.querySelector(".gallery-filter"),
-galleryItems = document.querySelectorAll(".portfolio_p");
+// 27. split title
+if (device_width > 576) {
+	let char_come = gsap.utils.toArray(".title-anim");
 
-filterContainer.addEventListener("click", (event) =>{
-	 if(event.target.classList.contains("filter_item")){
-	 // deactivate existing active 'filter-item'
-	 filterContainer.querySelector(".active").classList.remove("active");
-	 // activate new 'filter-item'
-	 event.target.classList.add("active");
-	 const filterValue = event.target.getAttribute("data-filter");
-	 galleryItems.forEach((item) =>{
-			if(item.classList.contains(filterValue) || filterValue === 'all'){
-			item.classList.remove("hide");
-				 item.classList.add("show");
-			}
-			else{
-			item.classList.remove("show");
-			item.classList.add("hide");
-			}
-	 });
-	 }
-});
+	char_come.forEach((char_come) => {
+		let split_char = new SplitText(char_come, {
+			type: "chars, words",
+			lineThreshold: 0.5,
+		});
+		const tl2 = gsap.timeline({
+			scrollTrigger: {
+				trigger: char_come,
+				start: "top 90%",
+				end: "bottom 60%",
+				scrub: false,
+				markers: false,
+				toggleActions: "play none none none",
+			},
+		});
+		tl2.from(split_char.chars, {
+			duration: 0.8,
+			x: 70,
+			autoAlpha: 0,
+			stagger: 0.03,
+		});
+	});
+}
