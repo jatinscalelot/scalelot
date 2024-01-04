@@ -431,8 +431,7 @@ $(function() {
 	};
 
 // porfolio fillter
-
-	const filterContainer = document.querySelector(".gallery-filter"),
+const filterContainer = document.querySelector(".gallery-filter"),
 galleryItems = document.querySelectorAll(".portfolio_p");
 
 filterContainer.addEventListener("click", (event) =>{

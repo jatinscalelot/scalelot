@@ -750,6 +750,34 @@
 			});
 		}
 
+		// 27. split title
+		if (device_width > 576) {
+			let char_come = gsap.utils.toArray(".title-anim");
+
+			char_come.forEach((char_come) => {
+				let split_char = new SplitText(char_come, {
+					type: "chars, words",
+					lineThreshold: 0.5,
+				});
+				const tl2 = gsap.timeline({
+					scrollTrigger: {
+						trigger: char_come,
+						start: "top 90%",
+						end: "bottom 60%",
+						scrub: false,
+						markers: false,
+						toggleActions: "play none none none",
+					},
+				});
+				tl2.from(split_char.chars, {
+					duration: 0.6,
+					x: 70,
+					autoAlpha: 0,
+					stagger: 0.03,
+				});
+			});
+		}
+
 		// 28. fade animations
 		if ($(".fade-left").length > 0) {
 			if (device_width > 576) {
@@ -881,6 +909,7 @@
 			}
 		}
 
+		
 		// 29. banner one thumb
 		if ($(".g-ban-one").length > 0) {
 			if (device_width > 576) {
@@ -1025,9 +1054,11 @@
 					start: 'bottom 100%-=50px'
 				}
 			});
+
 			gsap.set('.folks-text', {
 				opacity: 0
 			});
+
 			gsap.to('.folks-text', {
 				opacity: 1,
 				duration: 1,
@@ -1038,9 +1069,11 @@
 					once: true
 				}
 			});
+
 			let mySplitText = new SplitText(".folks-text", {
 				type: "words,chars,capitalize"
 			});
+
 			let chars = mySplitText.chars;
 			let folksGradient = chroma.scale(['#EF3238', '#ffffff']);
 			folksBD.to(chars, {
@@ -1086,30 +1119,3 @@
 })(jQuery);
 		
 
-// 27. split title
-if (device_width > 576) {
-	let char_come = gsap.utils.toArray(".title-anim");
-
-	char_come.forEach((char_come) => {
-		let split_char = new SplitText(char_come, {
-			type: "chars, words",
-			lineThreshold: 0.5,
-		});
-		const tl2 = gsap.timeline({
-			scrollTrigger: {
-				trigger: char_come,
-				start: "top 90%",
-				end: "bottom 60%",
-				scrub: false,
-				markers: false,
-				toggleActions: "play none none none",
-			},
-		});
-		tl2.from(split_char.chars, {
-			duration: 0.8,
-			x: 70,
-			autoAlpha: 0,
-			stagger: 0.03,
-		});
-	});
-}
