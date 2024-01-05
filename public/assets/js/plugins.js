@@ -770,7 +770,7 @@
 					},
 				});
 				tl2.from(split_char.chars, {
-					duration: 0.6,
+					duration: 0.8,
 					x: 70,
 					autoAlpha: 0,
 					stagger: 0.03,
