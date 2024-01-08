@@ -40,6 +40,7 @@
     ==================================================
 ============== */
 
+
 (function($) {
 	"use strict";
 
@@ -447,6 +448,37 @@ filterContainer.addEventListener("click", (event) =>{
 	 });
 	 }
 });
+
+
+
+var swiper = new Swiper(".mySwiper.porfolio_slider", {
+	slidesPerView: 1,
+	spaceBetween: 30,
+	loop: "true",
+	autoplay: {
+		delay: 2500,
+		disableOnInteraction: false,
+	},
+	pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+	},
+	breakpoints: {
+		640: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+		992: {
+			slidesPerView: 3,
+			spaceBetween: 40,
+		},
+		1280: {
+			slidesPerView: 4.5,
+			spaceBetween: 50,
+		},
+	},
+});
+console.log('Hello slider');
 
 })(jQuery);
 		
