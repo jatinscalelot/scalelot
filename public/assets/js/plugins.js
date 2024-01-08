@@ -1120,7 +1120,7 @@
 
 
 	// swiper slider 
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".mySwiper.porfolio_slider", {
 	slidesPerView: 1,
 	spaceBetween: 30,
 	loop: "true",
@@ -1137,11 +1137,11 @@ var swiper = new Swiper(".mySwiper", {
 			slidesPerView: 2,
 			spaceBetween: 20,
 		},
-		768: {
+		992: {
 			slidesPerView: 3,
 			spaceBetween: 40,
 		},
-		1024: {
+		1280: {
 			slidesPerView: 4.5,
 			spaceBetween: 50,
 		},
